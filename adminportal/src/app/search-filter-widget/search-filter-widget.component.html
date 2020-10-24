@@ -1,0 +1,17 @@
+<div class="widget-group">
+    <input (input)="searchResults($event)"
+    type="text" class="search">
+    <select name="" id="" class="btn" value="search-by">
+        <option default>search</option>
+        <option *ngFor="let result of resultsList" [ngValue]="result">{{result}}</option>
+    </select>
+</div>
+<div class="results-form" *ngIf="results" [ngStyle]="{'display:none;': (results==null)}">
+    <ul>
+        <li class="item">
+            <div>{{results.socialName}}</div>
+            <div class="id-tag">{{results.hutchId}}</div>
+        </li>
+    </ul>
+    <div (click)="close()" class="close">X</div>
+</div>

@@ -1,0 +1,21 @@
+<div>
+    <header>Nav Top</header>
+    <ul>
+        <li *ngFor="let item of navItems" 
+            (click)="toggleContentActive(item)"
+            class="accordion"
+            [ngClass]="{
+            'active': item.contentActive}">
+            {{item.name}} <span *ngIf="item.isList">--></span>
+            <div *ngIf="item.isList" >
+                <p *ngIf="item.contentActive">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                     sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+            </div>
+        </li>
+    </ul>
+    <footer>Nav Bottom</footer>
+</div>

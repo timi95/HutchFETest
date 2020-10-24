@@ -1,0 +1,33 @@
+<search-filter-widget></search-filter-widget>
+<div class="card">
+    <h2> Receipts for : {{details.userProfile.socialName}}</h2>
+    <h3> Some reciept related subtitle</h3>
+    <ul class="receipt-list">
+        <li *ngFor="let item of details.userIAPReceipts">
+                <div>
+                    <strong>ReceiptId:</strong> {{item.receiptId}}
+                </div><br>
+                <div>
+                    <strong>Provider:</strong>{{item.provider}}
+                </div> <br>
+                <div>
+                    <strong>ProductId:</strong> {{item.productId}}
+                </div> <br>
+                <div>
+                    <strong>DateOfPurchase:</strong>{{item.dateOfPurchase}}
+                </div> <br>
+                <div>
+                    <strong>Appx-$:</strong>{{item.approximateDollarValue}}
+                </div> <br>
+                <div>
+                    <strong>OrderId:</strong>{{item.orderId}}
+                </div> <br>
+                <div>
+                    <strong>Item-Refunded:</strong>{{item.refunded}}
+                </div> <br>
+        </li>
+    </ul>
+    
+
+</div>
+<footer> <h4>Some extra profile info</h4> </footer>
